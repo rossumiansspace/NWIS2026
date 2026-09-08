@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Station Directory · Lagro Tech Hub</title>
+<meta name="description" content="Scan any QR code around Lagro Tech Hub, or browse every station from here.">
+<link rel="stylesheet" href="/Pages/styles.css">
+<style>
+  .idx-hero{
+    background: linear-gradient(165deg, #123B6B 0%, var(--navy) 130%);
+    color:#fff; padding: 46px 20px 40px;
+  }
+  .idx-hero-inner{ max-width: 880px; margin:0 auto; }
+  .idx-hero .brandmark{ display:flex; align-items:center; gap:12px; margin-bottom:22px; }
+  .idx-hero .brandmark svg{ width:38px; height:38px; }
+  .idx-hero .brandmark span{ font-family:'Archivo'; font-weight:800; font-size:1.15rem; }
+  .idx-hero .brandmark b{ color: var(--cyan); }
+  .idx-hero h1{ color:#fff; font-size: 2rem; max-width: 16ch; margin-bottom:.3em; }
+  .idx-hero p{ color: rgba(255,255,255,.85); max-width:56ch; }
+  .idx-hero .scan-hint{
+    display:inline-flex; align-items:center; gap:8px; margin-top:18px;
+    font-size:.82rem; font-weight:600; color:#cfe0f5;
+    border:1px solid rgba(255,255,255,.25); padding:8px 16px; border-radius:30px;
+  }
+  .idx-main{ max-width: 880px; margin:0 auto; padding: 34px 20px 50px; }
+  .idx-section-title{ margin: 30px 0 14px; }
+  .idx-section-title:first-child{ margin-top:0; }
+  .idx-section-title h2{ font-size:1.15rem; margin-bottom:2px; }
+  .idx-section-title p{ margin:0; font-size:.88rem; }
+  .jstrip{ display:flex; gap:8px; overflow-x:auto; padding-bottom:6px; margin-bottom: 6px; }
+  .jchip{
+    flex: 0 0 auto; display:flex; align-items:center; gap:8px;
+    background:#fff; border:1px solid var(--hairline); border-radius: 30px;
+    padding: 8px 16px 8px 8px; font-size:.82rem; font-weight:600; color: var(--navy);
+    white-space:nowrap;
+  }
+  .jchip b{
+    width:22px; height:22px; border-radius:50%; background: var(--navy); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:.72rem; font-family:'Archivo';
+    flex-shrink:0;
+  }
+  .jchip:hover{ border-color: var(--navy); }
+  .sgrid{ display:grid; grid-template-columns: repeat(2, 1fr); gap:12px; }
+  @media (max-width:620px){ .sgrid{ grid-template-columns: 1fr; } }
+  .scard{
+    display:flex; gap:12px; align-items:flex-start; text-decoration:none;
+    background:#fff; border:1px solid var(--hairline); border-radius: var(--radius);
+    padding: 15px 16px; transition: border-color .15s ease, transform .15s ease;
+  }
+  .scard:hover{ border-color: var(--sc); transform: translateY(-1px); }
+  .scard-icon{
+    width:40px; height:40px; border-radius:11px; flex-shrink:0;
+    background: var(--scs); color: var(--sc);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .scard-icon svg{ width:22px; height:22px; }
+  .scard-top{ display:flex; align-items:center; gap:8px; }
+  .scard h3{ font-size:.96rem; margin:0; color: var(--navy); }
+  .scard p{ margin:4px 0 0; font-size:.82rem; color: var(--ink-soft); }
+  .idx-badge{
+    width:19px; height:19px; border-radius:50%; background: var(--sc); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:.66rem; font-family:'Archivo';
+    flex-shrink:0;
+  }
+</style>
+</head>
+<body>
+
+<header class="idx-hero">
+  <div class="idx-hero-inner">
+    <div class="brandmark"><svg viewBox="0 0 40 40" fill="none"><path d="M20 3 35 11.5v17L20 37 5 28.5v-17L20 3Z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M20 12v16M13 16v8l7 4M27 16v8l-7 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>LAGRO</b> TECH HUB</span></div>
+    <h1>Scan. Explore. Discover.</h1>
+    <p>From client request to working solution — every station below mirrors a real stop in how a project
+    moves through Lagro Tech Hub. Scan the QR code at any station, or browse them all right here.</p>
+    <span class="scan-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4" stroke-linecap="round"/><path d="m8.5 12 2.5-3 2 2 3-3.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Use your phone to scan any station's code</span>
+  </div>
+</header>
+
+<main class="idx-main">
+  <div class="idx-section-title">
+    <h2>The visitor journey</h2>
+    <p>Follow these eight stations in order to see a project's full lifecycle.</p>
+  </div>
+  <div class="jstrip"><a class="jchip" href="/Pages/client-desk.html"><b>1</b>Client Consultation</a><a class="jchip" href="project-desk.html"><b>2</b>Project Planning</a><a class="jchip" href="design-area.html"><b>3</b>UI/UX Design</a><a class="jchip" href="development-area.html"><b>4</b>Development</a><a class="jchip" href="database-area.html"><b>5</b>Database</a><a class="jchip" href="testing-area.html"><b>6</b>Testing</a><a class="jchip" href="presentation-area.html"><b>7</b>Presentation</a><a class="jchip" href="deployment-area.html"><b>8</b>Deployment</a></div>
+
+  <div class="idx-section-title">
+    <h2>All stations</h2>
+    <p>Every QR station at the summit, in one place.</p>
+  </div>
+  <div class="sgrid">
+    <a class="scard" href="/Pages/entrance-help-desk.html" style="--sc:#2F6FD6; --scs:#EAF1FD;">
+      <div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 13c1.5-3 3-1 4-3s1-4 3-4 2 2.5 3.5 2 2-3 3.5-1M4 18c1.5-3 3-1 4-3s1-4 3-4 2 2.5 3.5 2 2-3 3.5-1" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="scard-body">
+        <div class="scard-top"><h3>Entrance / Help Desk</h3></div>
+        <p>Welcome message, visitor guide, IT company info</p>
+      </div>
+    </a>
+    <a class="scard" href="/Pages/visitors-lounge.html" style="--sc:#4AA3C9; --scs:#EAF4F9;">
+      <div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12v5a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5M4 12a2 2 0 0 1 2-2h1v2m-3 0v3m16-3a2 2 0 0 0-2-2h-1v2m3 0v3M7 10V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="scard-body">
+        <div class="scard-top"><h3>Visitor&#x27;s Lounge</h3></div>
+        <p>Active projects, company overview, photo gallery</p>
+      </div>
+    </a>
+    <a class="scard" href="/Pages/client-desk.html" style="--sc:#3557D8; --scs:#EAF1FD;">
+      <div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18" stroke-linecap="round"/></svg></div>
+      <div class="scard-body">
+        <div class="scard-top"><span class="idx-badge">1</span><h3>Client Desk</h3></div>
+        <p>Services &amp; packages, process flow, contact info</p>
+      </div>
+    </a>
+    <a class="scard" href="/Pages/project-desk.html" style="--sc:#D69A2D; --scs:#FCF3E1;">
+      <div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="4" width="12" height="17" rx="2"/><rect x="9" y="2.5" width="6" height="3" rx="1"/><path d="M9 11h6M9 15h6" stroke-linecap="round"/></svg></div>
+      <div class="scard-body">
+        <div class="scard-top"><span class="idx-badge">2</span><h3>Project Desk</h3></div>
+        <p>Ongoing projects, updates, student team profiles</p>
+      </div>
+    </a>
+    <a class="scard" href="/Pages/meeting-area.html" style="--sc:#16918A; --scs:#E6F5F3;">
+      <div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 8.2a3 3 0 1 1 0 5.9M21.5 20c0-2.6-2-4.8-4.6-5.4" stroke-linecap="round"/></svg></div>
+      <div class="scard-body">
+        <div class="scard-top"><h3>Meeting Area</h3></div>
+        <p>Project requirements, sample forms, consultation guide</p>
+      </div>
+    </a>
+    <a class="scard" href="/Pages/design-area.html" style="--sc:#A855C9; --scs:#F5EAFB;">
+      <div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.8-.9 1.8-1.8 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.7-1.6 1.6-1.6H16a4 4 0 0 0 4-4c0-4.4-3.6-8.2-8-8.2Z"/><circle cx="7.5" cy="10.5" r="1.1"/><circle cx="10.5" cy="7" r="1.1"/><circle cx="15" cy="7.5" r="1.1"/></svg></div>
+      <div class="scard-body">
+        <div class="scard-top"><span class="idx-badge">3</span><h3>Design Area</h3></div>
+        <p>UI/UX portfolio, design samples, tools used</p>
+      </div>
+    </a>
+    <a class="scard" href="/Pages/development-area.html" style="--sc:#2FAE66; --scs:#E8F7EF;">
+      <div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m9 8-4 4 4 4M15 8l4 4-4 4M13 5l-2 14" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="scard-body">
+        <div class="scard-top"><span class="idx-badge">4</span><h3>Development Area</h3></div>
+        <p>Team profile, current projects, tech stack &amp; GitHub</p>
+      </div>
+    </a>
+    <a class="scard" href="/Pages/testing-area.html" style="--sc:#7C5CE0; --scs:#F0ECFC;">
+      <div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8" y="8" width="8" height="10" rx="4"/><path d="M9 9 7 6M15 9l2-3M4 12h4M16 12h4M5 17l3-1.5M19 17l-3-1.5M12 8V5m-2 0h4" stroke-linecap="round"/></svg></div>
+      <div class="scard-body">
+        <div class="scard-top"><span class="idx-badge">6</span><h3>Testing Area</h3></div>
+        <p>Testing checklist, bug reporting, QA process</p>
+      </div>
+    </a>
+    <a class="scard" href="/Pages/database-area.html" style="--sc:#5B4FCF; --scs:#EDEBFA;">
+      <div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="5.5" rx="7" ry="2.5"/><path d="M5 5.5V18c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V5.5M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5" stroke-linecap="round"/></svg></div>
+      <div class="scard-body">
+        <div class="scard-top"><span class="idx-badge">5</span><h3>Database Area</h3></div>
+        <p>Database structure, ERD diagrams, technologies used</p>
+      </div>
+    </a>
+    <a class="scard" href="/Pages/presentation-area.html" style="--sc:#1E9E86; --scs:#E5F5F1;">
+      <div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M9 20h6M12 16v4M7.5 10l2.5-2.5 2 2L16 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="scard-body">
+        <div class="scard-top"><span class="idx-badge">7</span><h3>Presentation Area</h3></div>
+        <p>Project portfolio, demo videos, client acceptance form</p>
+      </div>
+    </a>
+    <a class="scard" href="/Pages/deployment-area.html" style="--sc:#E0475C; --scs:#FCEBEE;">
+      <div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A5.5 5.5 0 0 1 17 8.1 4 4 0 0 1 16.5 18H7Z"/><path d="M12 15V9m0 0-2.3 2.3M12 9l2.3 2.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="scard-body">
+        <div class="scard-top"><span class="idx-badge">8</span><h3>Deployment Area</h3></div>
+        <p>Deployment process, servers &amp; network, system access</p>
+      </div>
+    </a>
+    <a class="scard" href="/Pages/finance-desk.html" style="--sc:#2469C4; --scs:#EAF1FD;">
+      <div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M16 14h2" stroke-linecap="round"/></svg></div>
+      <div class="scard-body">
+        <div class="scard-top"><h3>Finance Desk</h3></div>
+        <p>Project quotation, cost breakdown, payment options</p>
+      </div>
+    </a>
+    <a class="scard" href="/Pages/career-wall.html" style="--sc:#244E8A; --scs:#E9F0FA;">
+      <div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="10" r="2.4"/><path d="M8.5 17c.6-1.8 2-2.7 3.5-2.7s2.9.9 3.5 2.7M10 3v2m4-2v2" stroke-linecap="round"/></svg></div>
+      <div class="scard-body">
+        <div class="scard-top"><h3>Career Wall</h3></div>
+        <p>Meet our future IT professionals</p>
+      </div>
+    </a>
+    <a class="scard" href="/Pages/presentation-screen.html" style="--sc:#C97A2E; --scs:#FBF0E4;">
+      <div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4" stroke-linecap="round"/><path d="m8.5 12 2.5-3 2 2 3-3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="scard-body">
+        <div class="scard-top"><h3>Presentation Screen</h3></div>
+        <p>Today&#x27;s schedule, live project status, quick feedback</p>
+      </div>
+    </a>
+    <a class="scard" href="/Pages/server-network-area.html" style="--sc:#405A73; --scs:#EAEFF3;">
+      <div class="scard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="6" rx="1.5"/><rect x="4" y="14" width="16" height="6" rx="1.5"/><path d="M8 7h.01M8 17h.01M13 7h4M13 17h4" stroke-linecap="round"/></svg></div>
+      <div class="scard-body">
+        <div class="scard-top"><h3>Server / Network Area</h3></div>
+        <p>Network architecture, server specs, security protocols</p>
+      </div>
+    </a></div>
+</main>
+
+<footer class="pagefoot">
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <span>Lagro Tech Hub &middot; Student-Managed IT Solutions Center</span>
+      <span>Scan &middot; Explore &middot; Discover</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
