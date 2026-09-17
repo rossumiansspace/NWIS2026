@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Database Area · Lagro Tech Hub</title>
 <meta name="description" content="The structured backbone behind every project — where data models and schemas are designed.">
-<link rel="stylesheet" href="/NWIS2026/Pages/styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body style="--accent:#5B4FCF; --accent-soft:#EDEBFA;">
 
 <div class="topbar">
-  <div class="brand"><svg viewBox="0 0 40 40" fill="none"><path d="M20 3 35 11.5v17L20 37 5 28.5v-17L20 3Z" stroke="#23B7E5" stroke-width="2" stroke-linejoin="round"/><path d="M20 12v16M13 16v8l7 4M27 16v8l-7 4" stroke="#23B7E5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>LAGRO</b> TECH HUB</span></div>
-  <a class="dir-link" href="index.html">All stations</a>
+  <div class="brand"><img src="../Images/LAGROTECHHUB.png" alt="Lagro Tech Hub logo"><span><b>LAGRO</b> TECH HUB</span></div>
+  <a class="dir-link" href="../index.html">All stations</a>
 </div>
 
 <header class="hero">
@@ -29,13 +29,13 @@
 </header>
 
 <main>
-<div class="section"><div class="section-head"><span class="section-num">01</span><h2>Database structure</h2></div><p>A simplified example schema used for demo purposes.</p><div class="table-wrap"><table><thead><tr><th>Table</th><th>Purpose</th><th>Key fields</th></tr></thead><tbody><tr><td>users</td><td>Stores account and login data</td><td>id, name, email, role</td></tr><tr><td>projects</td><td>Tracks each client project</td><td>id, client_id, status, phase</td></tr><tr><td>tasks</td><td>Individual team tasks per project</td><td>id, project_id, assignee, due_date</td></tr></tbody></table></div></div><div class="section"><div class="section-head"><span class="section-num">02</span><h2>ERD diagrams</h2></div><p>Entity-relationship diagrams map out how these tables connect — for example, how a project links to its tasks and the team members assigned to it.</p><p class="ph">Placeholder — attach or display your project's actual ERD image here.</p></div><div class="section"><div class="section-head"><span class="section-num">03</span><h2>Technologies used</h2></div><div class="pillrow"><span class="pill">MySQL</span><span class="pill">PostgreSQL</span><span class="pill">Firebase</span><span class="pill">MongoDB</span><span class="pill">phpMyAdmin</span></div></div>
+<div class="section"><div class="section-head"><span class="section-num">01</span><h2>Database structure</h2></div><p>A simplified look at the schema behind <b>Logs</b>, our digital archiving &amp; document request system with Role-Based Access Control.</p><div class="table-wrap"><table><thead><tr><th>Table</th><th>Purpose</th><th>Key fields</th></tr></thead><tbody><tr><td>users</td><td>Registrar staff and students who can log in</td><td>id, name, email, role_id</td></tr><tr><td>roles</td><td>Defines what each account type can access (RBAC)</td><td>id, role_name, permissions</td></tr><tr><td>document_requests</td><td>Tracks each student's request for a record</td><td>id, user_id, document_type, delivery_type, status, requested_date</td></tr><tr><td>archived_records</td><td>The actual digitized student records on file</td><td>id, student_id, document_id, uploaded_by, upload_date</td></tr></tbody></table></div></div><div class="section"><div class="section-head"><span class="section-num">02</span><h2>How the tables connect</h2></div><p>Each <b>user</b> is tied to a <b>role</b>, which determines what they can see and do in the system — a registrar staff member and a student see very different dashboards. When a student submits a <b>document request</b>, it's linked back to their account and tracked through its status until it's approved. Once fulfilled, the request points to the matching entry in <b>archived records</b>, which also notes which staff member uploaded it and when — so every digital record stays traceable from request to fulfillment.</p></div><div class="section"><div class="section-head"><span class="section-num">03</span><h2>Technologies used</h2></div><div class="pillrow"><span class="pill">MySQL</span><span class="pill">PostgreSQL</span><span class="pill">Firebase</span><span class="pill">MongoDB</span><span class="pill">phpMyAdmin</span></div></div>
 </main>
 
 <footer class="pagefoot">
   <div class="foot-inner">
-    <a class="next-link" href="/NWIS2026/Pages/testing-area.html" style="text-decoration:none;"><div><span class="small">Next in the visitor journey</span><span class="name">6. Testing</span></div><div class="arrow">&rarr;</div></a>
-    <a class="back-dir" href="index.html">&larr; Back to all stations</a>
+    <a class="next-link" href="testing-area.html" style="text-decoration:none;"><div><span class="small">Next in the visitor journey</span><span class="name">6. Testing</span></div><div class="arrow">&rarr;</div></a>
+    <a class="back-dir" href="../index.html">&larr; Back to all stations</a>
     <div class="foot-brand">
       <span>Lagro Tech Hub &middot; Student-Managed IT Solutions Center</span>
       <span>Scan &middot; Explore &middot; Discover</span>

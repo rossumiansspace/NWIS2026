@@ -63,6 +63,7 @@ ul{ margin:0; padding:0; list-style:none; }
   color:#fff; letter-spacing:.01em;
 }
 .topbar .brand svg{ width:26px; height:26px; flex-shrink:0; }
+.topbar .brand img{ width:26px; height:26px; flex-shrink:0; border-radius:6px; object-fit:cover; }
 .topbar .brand span b{ color: var(--cyan); font-weight:800; }
 .topbar a.dir-link{
   font-size:.82rem; font-weight:600; color:#AFC7E5;
@@ -206,6 +207,48 @@ tr:last-child td{ border-bottom:none; }
   border:1px solid var(--hairline);
   display:flex; align-items:center; justify-content:center;
   color: var(--accent); font-size:.68rem; font-weight:600; text-align:center; padding:6px;
+}
+.gallery figure{ margin:0; }
+.gallery .gshot{
+  aspect-ratio: 4/3; border-radius: var(--radius-sm); overflow:hidden;
+  border:1px solid var(--hairline); background:#fff;
+}
+.gallery .gshot img{ width:100%; height:100%; object-fit:cover; display:block; }
+.gallery figcaption{
+  margin-top:6px; font-size:.74rem; font-weight:600; color: var(--navy); text-align:center;
+}
+
+/* featured mobile app + 2x2 grid layout */
+.gallery-featured{
+  --gallery-height: 332px;
+  display:grid; grid-template-columns: minmax(150px, .7fr) minmax(0, 1.9fr); gap:12px;
+  align-items:end; width:100%; min-width:0;
+}
+.gallery-featured figure{ margin:0; min-width:0; min-height:0; display:flex; flex-direction:column; }
+.gallery-featured figcaption{
+  margin-top:auto; font-size:.74rem; font-weight:600; color: var(--navy); text-align:center;
+}
+.gallery-featured .gshot-tall{
+  width:100%; max-width:190px; height:var(--gallery-height); border-radius: var(--radius-sm); overflow:hidden;
+  border:1px solid var(--hairline); background:#fff; min-height:0; min-width:0; display:block; margin:0 auto;
+}
+.gallery-featured .gshot-tall img{ width:100%; height:100%; object-fit:contain; object-position:center; display:block; background:#fff; }
+.gallery-featured .subgrid{
+  display:grid; grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2, 1fr); gap:12px; min-width:0; align-items:end;
+}
+.gallery-featured .subgrid figure{
+  display:flex; flex-direction:column; height:100%; box-sizing:border-box; align-self:end;
+}
+.gallery-featured .subgrid .gshot{
+  flex:1 1 auto; min-height:0; height:100%; border-radius: var(--radius-sm); overflow:hidden;
+  border:1px solid var(--hairline); background:#fff; min-width:0; width:100%;
+}
+.gallery-featured .subgrid .gshot img{ width:100%; height:100%; object-fit:cover; display:block; }
+.gallery-featured .subgrid figcaption{ display:block; margin-top:auto; line-height:1.2; }
+@media (max-width:640px){
+  .gallery-featured{ grid-template-columns: 1fr; }
+  .gallery-featured .gshot-tall{ aspect-ratio:auto; min-height:260px; }
 }
 
 /* profile card */
